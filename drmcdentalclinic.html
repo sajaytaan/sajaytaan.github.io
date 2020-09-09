@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=no">
+    <title>HEALTH DECLARATION FORM</title>
+</head>
+<body>
+    <div style="min-width: 320px;text-align: left;border: 2px solid #000;max-width: 700px;margin: 0 auto;font-size: 14px;">
+        <div style="font-size: 20px;border-bottom: 2px solid #000;text-align: center;">HEALTH DECLARATION FORM</div>
+        <div style="border-bottom: 2px solid #000;font-size: 12px;padding: 5px;">
+            <div>A separate Health Declaration Form must be completed for each patient.</div>    
+            <div>* Please answer truthfully and legibly in capital letters in each box provided</div>
+            <div style="font-size: 14px;text-align: center;">Thank you for your full cooperation!</div>
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            ID No. <input type="text" id="idNum">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            ID presented <input type="radio" checked name="idType" value="Passport"> Passport <input type="radio" name="idType" value="Driver's License"> Driver's License <input type="radio" name="idType" value="PRC Card"> PRC Card <input type="radio" name="idType" value="Others"> Others
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Family Name <input type="text" id="familyName">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            First Name <input type="text" id="firstName">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Middle Name <input type="text" id="middleName">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Nationality <input type="text" id="nationality">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Sex <input type="radio" checked name="sex" value="Male"> Male <input type="radio" name="sex" value="Female"> Female
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Birthday(mm-dd-yyy) <input type="text" id="birthday">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Last Dental Treatment(mm-dd-yyyy)  <input type="text" id="lastTreatment">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Plan Dental Treatment <input type="text" id="planTreatment">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Residence Address(Philippines) 
+            <div>
+                <input type="text" id="street" placeholder="House no. Street and Name of Barangay" style="width: 270px;">
+            </div> 
+            <div>
+                <input type="text" id="city" placeholder="Municipality / City">
+            </div> 
+            <div>
+                <input type="text" id="province" placeholder="Province">
+            </div>
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Philippine Mobile No. <input type="text" placeholder="+63" id="phoneNum">
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+           <div>Country(ies) and/or City(ies) worked, visited and transited in the <span style="font-weight: bold;">last 30 days</span></div>
+           <div>
+               <div><input type="text" id="c1"></div>
+               <div><input type="text" id="c2"></div>
+               <div><input type="text" id="c3"></div>
+               <div><input type="text" id="c4"></div>
+           </div>
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Have you been sick in the <span style="font-weight: bold;">past 30 days</span>? <input type="radio" checked name="sick" value="Yes"> Yes <input type="radio" name="sick" value="No"> No
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Body temperature upon check-in: <input type="text" style="width: 30px;" id='bodyTemp'> ℃
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            <div>
+                <div style="font-weight: bold;">DECLARATION:</div>
+                <div style="font-size: 12px;">
+                    The information I have given is true, correct and complete. I understand failure to answer any question may have serious consequences.<span style="font-weight: bold;">(Article 171 and 172 of the Revised Penal Code of the Philippines)</span>
+                </div>
+            </div>
+            <div>
+                Signature <input type="text" id="signature">
+            </div>
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;font-weight: bold;font-size: 24px;text-align: center;">
+            Dr. Maricar Cordero Dental Clinic
+        </div>
+        <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;text-align: center;">
+            <button id="submit" style="width: 100px;font-size: 20px;background: #03A9F4;color: #fff;margin: 5px;cursor: pointer;">Submit</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            emailjs.init("user_LVzdQ8jmHjOe1y82WFUKF");
+            var service_id = "dental_appointment";
+            var template_id = "Patient";
+            $('#submit').on('click', function(e){
+                var wrong = false;
+                e.preventDefault();
+                var template_params = {
+                    "idNum": $('#idNum').val(),
+                    "idType": $('[name="idType"]:checked').val(),
+                    "familyName": $('#familyName').val(),
+                    "firstName": $('#firstName').val(),
+                    "middleName": $('#middleName').val(),
+                    "nationality": $('#nationality').val(),
+                    "sex": $('[name="sex"]:checked').val(),
+                    "birthday": $('#birthday').val(),
+                    "treatmentDate": $('#lastTreatment').val(),
+                    "planTreatment": $('#planTreatment').val(),
+                    "street": $('#street').val(),
+                    "city": $('#city').val(),
+                    "province": $('#province').val(),
+                    "phoneNum": $('#phoneNum').val(),
+                    "c1": $('#c1').val(),
+                    "c2": $('#c2').val(),
+                    "c3": $('#c3').val(),
+                    "c4": $('#c4').val(),
+                    "sick": $('[name="sick"]:checked').val(),
+                    "bodyTemp": $('#bodyTemp').val(),
+                    "signature": $('#signature').val()
+                }
+                var arr = Object.keys(template_params)
+                for(var i = 0; i < arr.length; i++){
+                    if(template_params[arr[i]] === ''
+                    && arr[i] !== 'middleName' 
+                    && arr[i] !== 'c2'  
+                    && arr[i] !== 'c3'  
+                    && arr[i] !== 'c4' 
+                    ){                        
+                        wrong = true;     
+                        alert('Please complete the information and try again!');
+                        break;
+                    }
+                }
+                if(!wrong){
+                    emailjs.send(service_id, template_id, template_params);
+                    alert('Submit Success!');
+                }                
+                });                
+        });
+    </script>
+</body>
+</html>
