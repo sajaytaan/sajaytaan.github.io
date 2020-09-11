@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=no">
+    <title>Dr. MC Dental Clinic</title>
+</head>
+<body>
+    <div style="min-width: 320px;text-align: left;border: 2px solid #000;max-width: 700px;margin: 0 auto;font-size: 14px;">
+        <div style="font-size: 35px;text-align: center;"><strong>Dr. MC Dental Clinic</strong></div>
+            <div style="font-size: 15px;text-align: center;border-bottom: 2px solid #000">248 Reparo Rd, Caloocan, 1401 Metro Manila</div>   
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">			
+            <div style="font-size: 25px; text-align: center;padding: 20px"><strong>DENTAL CHART</strong></div>
+            <div style="font-size: 14px;text-align: left;"><strong>PATIENT INFORMATION RECORD</strong></div>
+		</div>
+            <div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Family Name <input type="text" id="fname">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Given Name <input type="text" id="gname">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Middle Name <input type="text" id="mname">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Birthdate <input type="date" id="bdate">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Age <input type="text" id="age">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Sex <input type="radio" checked name="sex" value="Male"> Male <input type="radio" name="sex" value="Female"> Female
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Nickname <input type="text" id="nname">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Residence Address(Philippines) 
+            <div>
+                <input type="text" id="street" placeholder="House no. Street and Name of Barangay" style="width: 270px;">
+            </div> 
+            <div>
+                <input type="text" id="city" placeholder="Municipality / City">
+            </div> 
+            <div>
+                <input type="text" id="province" placeholder="Province">
+            </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Cel/Mobile no. <input type="text" id="number">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Occupation <input type="text" id="occupation">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Parent/ Gurdian's Name <input type="text" id="guardianName">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Whom may we thank for referring you? <input type="text" id="refer">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            What is your reason for dental consultation? <input type="text" id="reason">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">			
+            <div style="font-size: 14px; text-align: left;padding: 5px"><strong>DENTAL HISTORY</strong></div>
+		</div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Previous Dentist <input type="text" id="pDentist">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Last Dental Visit <input type="text" id="lVisit">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">			
+            <div style="font-size: 14px; text-align: left;padding: 5px"><strong>MEDICAL HISTORY</strong></div>
+		</div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Name of Physician <input type="text" id="physician">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Are you in good health? <input type="radio" checked name="health" value="Yes"> Yes <input type="radio" name="health" value="no"> No
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            If not please specify (otherwise type none) <input type="text" id="healthProb">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Are you under medical treatment now? <input type="radio" checked name="treatment" value="Yes"> Yes <input type="radio" name="treatment" value="no"> No
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            If so, what is the condition being treatred? (otherwise type none) <input type="text" id="treatmentCon">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Have you ever had serious illness or surgical operation? <input type="radio" checked name="illness" value="Yes"> Yes <input type="radio" name="illness" value="no"> No
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            If so, what illness or operation (otherwise type none) <input type="text" id="illnessCon">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Have you you taking any prescription/non-prescription medication? <input type="radio" checked name="med" value="Yes"> Yes <input type="radio" name="med" value="no"> No
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            If so, pleaase specify (otherwise type none) <input type="text" id="medCon">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            Are you allergic to any of the following <br>
+			<input type="checkbox" name="allergy" value="Local Anestesia"> Local Anesthetic(ex. Lidocaine) 
+			<input type="checkbox" name="allergy" value="Antibiotic"> Penicilin. Antibiotics 
+			<input type="checkbox" name="allergy" value="Sulfa drugs"> Sulfa drugs 
+			<input type="checkbox" name="allergy" value="Aspirin"> Aspirin <input type="checkbox" name="allergy" value="Latex"> Latex<br>
+			if other please specify (otherwise type none) <input type="text" id="otherAllergies">
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;">
+            For women only:<br>
+			Are you pregnant <input type="radio" name="pregnant" value="Yes"> Yes <input type="radio" checked name="pregnant" value="No"> No<br>
+			Are you nursing <input type="radio" name="nursing" value="Yes"> Yes <input type="radio" checked name="nursing" value="No"> No<br>
+			Are you taking birth control pills <input type="radio" name="pills" value="Yes"> Yes <input type="radio" checked name="pills" value="No"> No
+        </div>
+		<div style="border-bottom: 2px solid #000;line-height: 30px;padding: 0 5px;text-align: center;">
+            <button id="submit" style="width: 100px;font-size: 20px;background: #03A9F4;color: #fff;margin: 5px;cursor: pointer;">Submit</button>
+        </div>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            emailjs.init("user_LVzdQ8jmHjOe1y82WFUKF");
+            var service_id = "dental_appointment";
+            var template_id = "dental_chart";
+            $('#submit').on('click', function(e){
+                var wrong = false;
+                e.preventDefault();
+                var template_params = {
+                    "fname": $('#fname').val(),
+                    "gname": $('#gname').val(),
+                    "mname": $('#mname').val(),
+                    "nationality": $('#nationality').val(),
+                    "sex": $('[name="sex"]:checked').val(),
+                    "bdate": $('#bdate').val(),
+                    "nname": $('#nname').val(),
+                    "number": $('#number').val(),
+                    "street": $('#street').val(),
+                    "city": $('#city').val(),
+                    "province": $('#province').val(),
+                    "occupation": $('#occupation').val(),
+                    "guardianName": $('#guardianName').val(),
+                    "refer": $('#refer').val(),
+                    "reason": $('#reason').val(),
+                    "pDentist": $('#pDentist').val(),
+                    "lVisit": $('#lVisit').val(),
+                    "health": $('[name="health"]:checked').val(),
+					"healthProb": $('#healthProb').val(),
+                    "treatment": $('[name="treatment"]:checked').val(),
+					"treatmentCon": $('#treatmentCon').val(),
+					"illness": $('[name="illness"]:checked').val(),
+					"illnessCon": $("#illnessCon").val(),
+					"med": $('[name="med"]:checked').val(),
+					"medCon": $('#medCon').val(),
+					"allergy": $('[name="allergy"]:checked').val(),
+					"otherAllergies": $('#otherAllergies').val(),
+					"pregnant": $('[name="pregnant"]:checked').val(),
+					"pills": $('[name="pills"]:checked').val(),
+					"nursing": $('[name="nursing"]:checked').val(),
+					"age": $('#age').val(),
+					"physician": $('#physician').val()
+                }
+                var arr = Object.keys(template_params)
+                for(var i = 0; i < arr.length; i++){
+                    if(template_params[arr[i]] === ''
+                    && arr[i] !== 'middleName' 
+                    && arr[i] !== 'c2'  
+                    && arr[i] !== 'c3'  
+                    && arr[i] !== 'c4' 
+                    ){                        
+                        wrong = true;     
+                        alert('Please complete the information and try again!');
+                        break;
+                    }
+                }
+                if(!wrong){
+                    emailjs.send(service_id, template_id, template_params);
+                    alert('Submit Success!');
+                }                
+                });                
+        });
+    </script>
+</body>
+</html>
+		
+	</div>
